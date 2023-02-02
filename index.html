@@ -69,7 +69,17 @@
     var num = 0;
     const max = 3;
 
-    function back() {
+    function checkURL() {
+        window.location.search.slice(1, window.location.search.length).split('&').forEach(s => {
+            if (s.startsWith('z')) {
+                num = parseInt(s.split('=')[1])
+                load(num);
+                return;
+            }
+        });
+    }
+
+    function back(num) {
         if (num > 0) {
             num--;
         } else {
@@ -84,15 +94,15 @@
         } else {
             num = 0;
         }
-        load()
+        load(num)
     }
 
-    function load() {
-        document.querySelector('main img').src = `zitate/${num}.png`;
+    function load(n) {
+        document.querySelector('main img').src = `zitate/${n}.png`;
     }
 </script>
 
-<body>
+<body onload="checkURL();">
     <main>
         <img src="zitate/0.png" alt="Ein Fehler ist aufgetreten">
     </main>
