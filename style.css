@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+footer {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+footer button {
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 34px;
+    max-height: 34px;
+    background-color: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: #fff;
+    font-size: 20px;
+}
+
+main {
+    background-color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+main #zitat_box {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #ffffff;
+    min-width: 25vw;
+    max-width: 25vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 4px #b4b4b4;
+}
+
+main #zitat {
+    font-size: 40px;
+}
+
+@media screen and ((max-width: 1000px)) {
+    main #zitat {
+        font-size: 30px;
+    }
+} 
+
+@media screen and ((max-width: 900px) or (max-height: 900px)) {
+    main #zitat_box {
+        min-width: 80vw;
+        max-width: 80vw;
+        aspect-ratio: 1 / 1;
+    }
+
+    main #zitat {
+        font-size: 30px;
+    }
+} 
