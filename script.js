@@ -33,40 +33,21 @@ const max = zitate.length;
 
 function OnLoad() {
     load(num);
-    checkURL();
-}
-
-function checkURL() {
-    window.location.search.slice(1, window.location.search.length).split('&').forEach(s => {
-        if (s.startsWith('z')) {
-            num = parseInt(s.split('=')[1])
-            load(num);
-            return;
-        }
-    });
 }
 
 function plus() {
-    if (num == zitate.length - 1) {
-        num = 0;
-    } else {
-        num = num + 1;
-    }
+    if (++num > zitate.length - 1) num = 0;
     load(num);
 }
 
 function minus() {
-    if (num == 0) {
-        num = zitate.length - 1;
-    } else {
-        num = num - 1;
-    }
+    if (--num < 0) num = zitate.length - 1;
     load(num);
 }
 
 function load(index) {
-    document.querySelector('#zitat').innerText = zitate[index];
+    document.getElementById("zitate").innerText = zitate[index];
     let n = colors[Math.floor(Math.random() * colors.length)];
-    document.querySelector('#zitat_box').style.backgroundColor = n.bg;
-    document.querySelector('#zitat').style.color = n.color;
+    document.getElementById("zitat_box").style.backgroundColor = n.bg;
+    document.getElementById("#zitat").style.color = n.color;
 }
