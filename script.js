@@ -49,5 +49,5 @@ function load(index) {
     document.getElementById("zitate").innerText = zitate[index];
     let n = colors[Math.floor(Math.random() * colors.length)];
     document.getElementById("zitat_box").style.backgroundColor = n.bg;
-    document.getElementById("#zitat").style.color = n.color;
+    document.getElementById("zitat").style.color = n.color;
 }
