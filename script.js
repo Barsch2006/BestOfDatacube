@@ -12,16 +12,16 @@ const colors = [
         bg: '#1e1e1e', color: '#fff'
     },
     {
-        bg: '#00c00a', color: '#000'
+        bg: 'blue', color: '#fff'
     },
     {
-        bg: '#0023c0', color: '#fff'
+        bg: 'red', color: '#fff'
     },
     {
-        bg: '#c000ad', color: '#fff'
+        bg: 'yellow', color: '#000'
     },
     {
-        bg: '#7000c0', color: '#fff'
+        bg: '#black', color: '#fff'
     },
     {
         bg: '#ffffff', color: '#000'
